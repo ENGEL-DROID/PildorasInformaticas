@@ -22,7 +22,11 @@ public class UsoEmpleado {
      misEmpleados[1]=new Empleado("tatiana", 50000, 1995, 06, 15);
      misEmpleados[2]=JefeRecursosHumanos;//Polimorfismo en accion
      misEmpleados[3]=new Jefe("thiago", 95000, 1999, 5, 26);
-    
+     Jefe jefa_Finanzas=(Jefe) misEmpleados[3];
+     
+     
+    System.out.println(jefa_Finanzas.tomar_decisiones("Dar mas dias de vacaciones a los empleados"));
+     
     for(Empleado e: misEmpleados){
        e.setsubeSueldo(5);
        }         
