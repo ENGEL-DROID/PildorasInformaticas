@@ -11,9 +11,9 @@ import herencia_y_polimorfismo.*;
  *
  * @author Antonella
  */
-public class Jefe extends Empleado implements jefes{
+public class Jefatura extends Empleado implements jefes{
   
-    public Jefe(String nom, double sue, int agno, int mes, int dia) {
+    public Jefatura(String nom, double sue, int agno, int mes, int dia) {
         super(nom,  sue,  agno,  mes,  dia);
     }
    
@@ -21,7 +21,6 @@ public class Jefe extends Empleado implements jefes{
     incentivo=b;
 }
     
-    @Override
     public double getdameSueldo(){
         double SueldoJefe=super.getdameSueldo();
         return SueldoJefe + incentivo;
@@ -29,6 +28,12 @@ public class Jefe extends Empleado implements jefes{
     
     public String tomar_decisiones(String decision) {
         return "Un miembro de la Dr ha tomado la decision de: "+decision;
+    }
+    
+    
+    public double establece_bonus(double gratificacion){
+        double prima=2000;
+        return Trabajadores.bonus_base+gratificacion+prima;
     }
     
   private double incentivo;

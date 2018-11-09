@@ -14,17 +14,18 @@ import java.util.Arrays;
  */
 public class UsoEmpleado {
     public static void main(String[] arg){
-     Jefe JefeRecursosHumanos=new Jefe("luis",  55000, 2006, 9,25);
+     Jefatura JefeRecursosHumanos=new Jefatura("luis",  55000, 2006, 9,25);
      JefeRecursosHumanos.EstableceIncentivo(2570);
      
      Empleado[] misEmpleados=new Empleado[4];
      misEmpleados[0]=new Empleado("antonella", 30000, 2000, 07, 07);
      misEmpleados[1]=new Empleado("tatiana", 50000, 1995, 06, 15);
      misEmpleados[2]=JefeRecursosHumanos;//Polimorfismo en accion
-     misEmpleados[3]=new Jefe("thiago", 95000, 1999, 5, 26);
-     Jefe jefa_Finanzas=(Jefe) misEmpleados[3];
-     
-     
+     misEmpleados[3]=new Jefatura("thiago", 95000, 1999, 5, 26);
+     Jefatura jefa_Finanzas=(Jefatura) misEmpleados[3];
+     System.out.println("El jefe "+jefa_Finanzas.getdameNombre()+ "tiene un bonus de "+ jefa_Finanzas.establece_bonus(500));
+     System.out.println("El empleado "+ misEmpleados[1].getdameNombre() + "tiene un bonus de "+ misEmpleados[1].establece_bonus(200));
+         
     System.out.println(jefa_Finanzas.tomar_decisiones("Dar mas dias de vacaciones a los empleados"));
      
     for(Empleado e: misEmpleados){

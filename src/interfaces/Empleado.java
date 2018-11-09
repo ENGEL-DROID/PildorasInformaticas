@@ -12,7 +12,7 @@ import java.util.GregorianCalendar;
  *
  * @author Antonella
  */
-public class Empleado implements Comparable {
+public class Empleado implements Comparable, Trabajadores {
     public Empleado(String nom){      
        this(nom, 3000, 1991,01,01);  //Llama a otro constructor para asignar un  valor por defecto
    } 
@@ -55,10 +55,18 @@ public class Empleado implements Comparable {
         return 0;
    }
    
+    
+    public double establece_bonus(double gratificacion) {
+     return Trabajadores.bonus_base+gratificacion;  
+    }
+    
+    
    private String nombre;
    private double sueldo;
    private Date altaContrato;
    private int Id;
    private static int IdSiguiente=1;
+
+  
    
 }
