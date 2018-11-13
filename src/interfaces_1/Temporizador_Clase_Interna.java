@@ -29,8 +29,6 @@ public class Temporizador_Clase_Interna {
 }
 
 
-
-
 class Reloj{
 
  public Reloj(int intervalo, boolean sonido){
